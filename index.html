@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- <h1 style="background-color: yellow;">Ola Website AWS-S3</h1> -->
+<div class="lb-tbl lb-tbl-p lb-tbl-header-centered" data-is-sticky-header="false"> 
+        <table cellspacing="5" cellpadding="5" border = "1"> 
+         <tbody> 
+          <tr> 
+           <th>&nbsp;</th> 
+           <th style="text-align: center;" >S3 Standard</th> 
+           <th style="text-align: center;">S3 Intelligent-Tiering*<br> </th> 
+           <th style="text-align: center;">S3 Standard-IA<br> </th> 
+           <th style="text-align: center;">S3 One Zone-IA<br> </th> 
+           <th style="text-align: center;">S3 Glacier<br> Instant Retrieval<br> </th> 
+           <th>S3 Glacier Flexible Retrieval</th> 
+           <th style="text-align: center;">S3 Glacier<br> Deep Archive**<br> </th> 
+          </tr> 
+          <tr> 
+           <td>Projetado para resiliência<br> </td> 
+           <td style="text-align: center;">99,999999999%<br> (11 9s)</td> 
+           <td style="text-align: center;">99,999999999%<br> (11 9s)</td> 
+           <td style="text-align: center;">99,999999999%<br> (11 9s)</td> 
+           <td style="text-align: center;">99,999999999%<br> (11 9s)</td> 
+           <td style="text-align: center;">99,999999999%<br> (11 9s)</td> 
+           <td>99,999999999%<br> (11 9s)</td> 
+           <td style="text-align: center;">99,999999999%<br> (11 9’s)</td> 
+          </tr> 
+          <tr> 
+           <td>Projetado para disponibilidade<br> </td> 
+           <td style="text-align: center;">99,99%</td> 
+           <td style="text-align: center;">99,9%</td> 
+           <td style="text-align: center;">99,9%</td> 
+           <td style="text-align: center;">99,5%</td> 
+           <td style="text-align: center;">99,9%</td> 
+           <td>99,99%</td> 
+           <td style="text-align: center;">99,99%<br> </td> 
+          </tr> 
+          <tr> 
+           <td>Acordo de nível de serviço de disponibilidade</td> 
+           <td style="text-align: center;">99,9%</td> 
+           <td style="text-align: center;">99%</td> 
+           <td style="text-align: center;">99%</td> 
+           <td style="text-align: center;">99%</td> 
+           <td style="text-align: center;">99%<br> </td> 
+           <td>99,9%</td> 
+           <td style="text-align: center;">99,9%<br> </td> 
+          </tr> 
+          <tr> 
+           <td>Zonas de disponibilidade</td> 
+           <td style="text-align: center;">≥3</td> 
+           <td style="text-align: center;">≥3</td> 
+           <td style="text-align: center;">≥3</td> 
+           <td style="text-align: center;">1</td> 
+           <td style="text-align: center;">≥3</td> 
+           <td>≥3</td> 
+           <td style="text-align: center;">≥3</td> 
+          </tr> 
+          <tr> 
+           <td>Cobrança mínima de capacidade por objeto</td> 
+           <td style="text-align: center;">N/D</td> 
+           <td style="text-align: center;">N/D</td> 
+           <td style="text-align: center;">128 KB</td> 
+           <td style="text-align: center;">128 KB</td> 
+           <td style="text-align: center;">128 KB</td> 
+           <td>40 KB</td> 
+           <td style="text-align: center;">40 KB</td> 
+          </tr> 
+          <tr> 
+           <td>Cobrança mínima de duração de armazenamento</td> 
+           <td style="text-align: center;">N/D</td> 
+           <td style="text-align: center;">N/D</td> 
+           <td style="text-align: center;">30 dias</td> 
+           <td style="text-align: center;">30 dias</td> 
+           <td style="text-align: center;">90 dias</td> 
+           <td>90 dias</td> 
+           <td style="text-align: center;">180&nbsp;dias</td> 
+          </tr> 
+          <tr> 
+           <td>Taxa de recuperação</td> 
+           <td style="text-align: center;">N/D<br> </td> 
+           <td style="text-align: center;">N/D<br> </td> 
+           <td style="text-align: center;">por GB recuperado<br> </td> 
+           <td style="text-align: center;">por GB recuperado</td> 
+           <td style="text-align: center;">por GB recuperado</td> 
+           <td>por GB recuperado</td> 
+           <td style="text-align: center;">por GB recuperado</td> 
+          </tr> 
+          <tr> 
+           <td>Latência de primeiro byte</td> 
+           <td style="text-align: center;">milissegundos</td> 
+           <td style="text-align: center;">milissegundos</td> 
+           <td style="text-align: center;">milissegundos</td> 
+           <td style="text-align: center;">milissegundos</td> 
+           <td style="text-align: center;">milissegundos</td> 
+           <td>minutos ou horas</td> 
+           <td style="text-align: center;">horas</td> 
+          </tr> 
+          <tr> 
+           <td>Tipo de armazenamento</td> 
+           <td style="text-align: center;">Objeto</td> 
+           <td style="text-align: center;">Objeto</td> 
+           <td style="text-align: center;">Objeto</td> 
+           <td style="text-align: center;">Objeto</td> 
+           <td style="text-align: center;">Objeto</td> 
+           <td>Objeto</td> 
+           <td style="text-align: center;">Objeto</td> 
+          </tr> 
+          <tr> 
+           <td>Transições de ciclo de vida</td> 
+           <td style="text-align: center;">Sim</td> 
+           <td style="text-align: center;">Sim</td> 
+           <td style="text-align: center;">Sim</td> 
+           <td style="text-align: center;">Sim</td> 
+           <td style="text-align: center;">Sim</td> 
+           <td>Sim</td> 
+           <td style="text-align: center;">Sim</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+       </div>
+
+</body>
+</html>
