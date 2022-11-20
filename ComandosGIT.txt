@@ -29,3 +29,9 @@ git log
 
 // Consultando o histórico do GIT (curto)
 git log --oneline
+
+// Visualizar historico + alterações
+git log -p
+
+// Visualizar historico de formatado -> https://devhints.io/git-log
+git log --pretty="format:%h %aE %aD"
