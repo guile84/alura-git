@@ -1,0 +1,31 @@
+// informar quem é você para que ele armazene corretamente os dados do autor de cada uma das alterações no código.
+git config --local user.name "Seu nome aqui"
+git config --local user.email "seu@email.aqui"
+
+// Inicialização do repositório do Git
+git init (criar branch
+
+// Status do GIT
+git status
+
+// Status short (A - Stage M - Modified ?? - No tracked)
+git status -s
+git status --short
+
+// Adicionar arquivo ao GIT (* funciona)
+git add nomearquivocompleto 
+
+// Gravar/"Commitar" os arquivos que estão no stage
+git commit -m "mensagem para identificar o commit"
+
+// Compara arquivos alterados antes de subir através do commit
+//-- compara arquivo antes do stage com o que esta no stage
+git diff 
+//-- compara arquivo do stage com a ultima versão
+git diff --staged
+
+// Consultando o histórico do GIT
+git log
+
+// Consultando o histórico do GIT (curto)
+git log --oneline
